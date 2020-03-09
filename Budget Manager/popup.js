@@ -1,6 +1,7 @@
 $(() => {
-	chrome.storage.sync.get('total', budget => {
+	chrome.storage.sync.get(['total', 'limit'], budget => {
 		$('#total').text(budget.total);
+		$('#limit').text(budget.limit);
 	});
 
 	$('#spendAmount').click(() => {
