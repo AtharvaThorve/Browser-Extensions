@@ -10,14 +10,14 @@ $(() => {
 			if (budget.total) {
 				newTotal = parseInt(budget.total);
 			}
-			let amount = $('#amount').val();
+			const amount = $('#amount').val();
 			if (amount) {
 				newTotal += parseInt(amount);
 			}
 			chrome.storage.sync.set({ total: newTotal }, () => {
 				if (amount && newTotal >= budget.limit) {
 					// Specifications of the notification that will be displayed
-					let notifOptions = {
+					const notifOptions = {
 						type: 'basic',
 						iconUrl: 'icon48.png',
 						title: 'Limit reached',
