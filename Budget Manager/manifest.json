@@ -15,7 +15,5 @@
 
 	"options_page": "options.html",
 
-	"permissions": [
-		"storage" 
-	]
+	"permissions": ["storage", "notifications"]
 }
