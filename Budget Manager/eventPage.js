@@ -43,3 +43,11 @@ chrome.contextMenus.onClicked.addListener(clickData => {
 		}
 	}
 });
+
+// To add a badge to the extension that will dispay the total value stored.
+chrome.storage.onChanged.addListener((changes, storageName) => {
+	// Whenever value in storage changes this will be executed
+	chrome.browserAction.setBadgeText({
+		text: changes.total.newValue.toString()
+	});
+});
