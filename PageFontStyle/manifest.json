@@ -18,8 +18,16 @@
 
 	"background": {
 		"scripts": ["eventPage.js"],
-		"persistent": true
+		"persistent": false
 	},
 
-	"permissions": ["tabs"]
+	"content_scripts": [
+		{
+			"matches": ["https://developer.chrome.com/*"],
+			"js": ["content.js", "jquery-3.4.1.min.js"],
+			"css": ["content.css"]
+		}
+	],
+
+	"permissions": ["tabs", "https://developer.chrome.com/*"]
 }
