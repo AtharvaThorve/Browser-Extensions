@@ -6,6 +6,7 @@ chrome.runtime.sendMessage({ todo: 'showPageAction' });
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	if (request.todo == 'changeColor') {
 		let addColor = '#' + request.clickedColor;
-		$('*').css('color', addColor);
+		let changeFontSize = request.selectedFontSize + 'px';
+		$('*').css({'color': addColor, 'font-size': changeFontSize});
 	}
 });

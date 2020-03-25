@@ -11,9 +11,22 @@
 				min-height: 150px;
 			}
 		</style>
+		<link rel="stylesheet" href="popup.css" />
 	</head>
 	<body>
 		<input type="text" id="fontColor" class="jscolor" value="ffcc00" />
+		<p>Font Size: </p>
+		<div class="slidecontainer">
+			<input
+				type="range"
+				min="1"
+				max="50"
+				value="25"
+				class="slider"
+				id="myRange"
+			/>
+			<p>Value: <span id="demo"></span></p>
+		</div>
 		<input type="submit" id="btnChange" value="Change" />
 	</body>
 </html>
